@@ -1,0 +1,799 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(.43,1.1,.62,1.08);
+    text-transform: capitalize;
+}
+
+* > img{
+    user-select: none;
+    pointer-events: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: white;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color:palevioletred;
+}
+
+section{
+    padding: 5rem 10%;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.heading span{
+    font-size: 2.5rem;
+    color: palevioletred;
+    font-weight: bolder;
+}
+
+.heading h3{
+    font-size: 4.5rem;
+}
+
+.btn{
+   margin-top: 1rem;
+   display: inline-block;
+   background:rgb(243, 223, 227);
+   color: black;
+   font-size: 2rem;
+   cursor: pointer;
+   padding: 1rem 3rem;
+   border-radius: 10px;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+
+}
+
+.header{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 3px whitesmoke;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;  
+    background:white;
+    z-index: 1000;
+}
+
+.header .logo{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.header .logo i{
+    color:palevioletred;
+    padding-right: .9rem;
+    
+}
+
+a{
+    color: rgb(248, 170, 185);
+    font-weight: bolder;
+}
+a:hover{
+    color: palevioletred;
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: palevioletred;
+}
+
+.header .navbar a:hover{
+    color: rgb(248, 170, 185);
+}
+
+#menu-btn{
+    font-size: 3rem;
+    cursor: pointer;
+    color: palevioletred;
+    font-weight: bolder;
+    display: none;
+}
+
+@keyframes fadeIn{
+    0%{
+        transform: translateY(-4rem) scale(0);
+        opacity: 0;
+    }
+}
+
+.home{
+    padding: 0;
+    background: black;
+}
+
+.home .swiper-slide{
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .swiper-slide::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.69);
+    z-index:-1;
+}
+
+.home .swiper-slide .content{
+    text-align: center;
+    width: 70rem;
+    display: none;
+}
+
+.home .swiper-slide .content span{
+    font-size: 3rem;
+    display: block;
+    padding-bottom: .5rem;
+    color: white;
+    animation: fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34) .2s backwards;
+}
+
+.home .swiper-slide .content h3{
+    font-size: 8vw;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 .5rem 1rem rgba(0,0,0,.7);
+    line-height: 1;
+    padding: 2rem 0;
+    animation: fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34) .4s backwards;
+}
+
+.home .swiper-slide .content .btn{
+    animation: fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34) .6s backwards;
+}
+
+.home .swiper-slide-active .content{
+       display: inline-block;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+   height: 5rem;
+   width: 5rem;
+   line-height: 5rem;
+   background: white;
+   color: palevioletred;
+   font-weight: bolder;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    background:rgb(243, 223, 227);
+    color: palevioletred;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 2rem;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .image{
+    flex: 1 1 41rem;
+}
+
+.about .image img{
+    width: 100%;
+}
+
+.about .content{
+    flex: 1 1 41rem;
+}
+
+img{
+    height: 75px;
+    width: 75px;
+}
+
+.img1{
+    height: 300px;
+    width: 800px;
+}
+
+.about .content .title{
+    font-size: 4rem;
+    color: black;
+}
+
+.about .content p{
+    font-size: 1.7rem;
+    font-weight: normal;
+    color: rgb(45, 47, 49);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.about .content .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.about .content .icons-container .icons{
+    flex: 1 1 16rem;
+    text-align: center;
+    background: rgb(243, 223, 227);
+    padding: 3rem 2rem;
+}
+
+.about .content .icons-container .icons h3{
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: rgb(7, 7, 7);
+    font-weight: bolder;
+}
+
+.icecream{
+    background: rgb(243, 220, 228);
+}
+
+.icecream .slide{
+    text-align: center;
+    padding: 6rem 3rem;
+    transform: scale(.9);
+    opacity: .7;
+    margin-bottom: 7rem;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active{
+    background: palevioletred;
+}
+
+
+.icecream .swiper-slide-active{
+    transform: scale(1.2);
+    opacity: 1;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.icecream .slide img{
+    height: 20rem;
+    width: 30rem;
+}
+
+.icecream .slide h3{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: black;
+    text-align: center;
+}
+
+.icecream .slide .price{
+    font-size: 2.5rem;
+    color: palevioletred;
+    font-weight: bolder;
+}
+
+
+
+.icecream-preview-container{
+    background-color: rgba(7, 0, 0, 0.253);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.icecream-preview-container .icecream-preview{
+    text-align: center;
+    background: white;
+    padding: 1rem 0.5rem;
+    border-radius: .5rem;
+    display: none;
+}
+
+.icecream-preview-container .icecream-preview.active{
+    display: inline-block;
+    animation: fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34) backwards;
+}
+
+.icecream-preview-container .icecream-preview img{
+    height: 20rem;
+    width: 30rem;
+    margin-bottom: 1rem;
+}
+
+.icecream-preview-container .icecream-preview h3{
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.icecream-preview-container .icecream-preview .stars{
+    margin-bottom: 1rem;
+}
+
+.icecream-preview-container .icecream-preview .stars i{
+    font-size: 1.7rem;
+    color: palevioletred;
+}
+
+.icecream-preview-container .icecream-preview p{
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: black;
+}
+
+.icecream-preview-container .icecream-preview .price{
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: .5rem;
+    font-weight: bolder;
+}
+
+#close-preview{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 6rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color:white;
+}
+
+#close-preview:hover{
+    transform: rotate(90deg);
+}
+
+.gallery .gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)) ;
+    gap: 2rem;
+}
+
+.gallery .gallery-container .box{
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .gallery-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .gallery-container .box .icon{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(14, 13, 13, 0.61);
+}
+
+.gallery .gallery-container .box .icon i{
+    font-size: 6rem;
+    color: rgb(255, 213, 227);
+}
+
+.gallery .gallery-container .box:hover .icon{
+    display: flex;
+}
+
+.menu{
+    background: rgb(245, 215, 225);
+}
+
+.menu .slide .title{
+    padding: 1rem;
+    font-size: 3rem;
+    color: white;
+    background: palevioletred;
+    margin-bottom: 3rem;
+    text-align: center;
+    border-radius:15px ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.menu .slide .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.menu .slide .box-container .box{
+    flex: 1 1 41rem;
+    background: white;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.menu .slide .box-container .box h3{
+    font-size: 2.5rem;
+    color: black;
+    padding-bottom: .5rem;
+}
+
+.menu .slide .box-container .box p{
+    font-size: 1.6rem;
+    color: black;
+    line-height: 2;
+}
+
+.menu .slide .box-container .box .price{
+    font-size: 2.5rem;
+    color: palevioletred;
+    font-weight: bolder;
+}
+
+.menu .slide .box-container .box:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+
+.order{
+    background: palevioletred;
+}
+
+.order .heading span{
+    color: white;
+    font-weight: lighter;
+}
+
+.order .heading h3{
+    color: white;
+}
+
+.order form{
+    padding: 2rem;
+    background: white;
+    box-shadow: rgba(246, 247, 248, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 15px;
+}
+
+.order form .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.order form .box-container .box{
+    flex: 1 1 41rem;
+
+}
+
+.order form .box-container .box .inputBox input,
+.order form .box-container .box .inputBox textarea{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    color: black;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-transform: none;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.order form .box-container .box .inputBox input::placeholder,
+.order form .box-container .box .inputBox textarea::placeholder{
+    text-transform: capitalize;
+}
+
+.order form .box-container .box .inputBox input:focus,
+.order form .box-container .box .inputBox textarea:focus{
+    background: rgb(247, 209, 221);
+    color: black;
+}
+
+.order form .box-container .box .inputBox input:focus::placeholder,
+.order form .box-container .box .inputBox textarea:focus::placeholder{
+    color: black;
+}
+
+.order form .box-container .box .inputBox textarea{
+    height: 20rem;
+    resize: none;
+}
+
+.order form .box-container .box .inputBox .map{
+    height: 20rem;
+    width: 100%;
+    margin: 1rem 0;
+    padding: .5rem 0;
+}
+
+.order form .box-container .box .inputBox span{
+    color: black;
+    font-size: 2rem;
+}
+
+.blogs{
+    background: rgb(243, 207, 219);
+}
+
+.blogs .slide .image{
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogs .slide .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogs .slide .image span{
+    position: absolute;
+    bottom: -10rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .5rem 1.5rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    background: rgb(12, 12, 12);
+    z-index: 10;
+}
+
+.blogs .slide:hover .image span{
+    bottom: 1rem;
+}
+
+.blogs .slide:hover .image img{
+    transform: scale(1.1);
+}
+
+.blogs .slide .content{
+    padding: 2rem;
+    background: white;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    border: 1px solid rgb(204, 199, 199);
+    margin-bottom: 4rem;
+}
+
+.blogs .slide .content .icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.blogs .slide .content .icon a{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.blogs .slide .content .icon a i{
+    padding-right: .7rem;
+    color: palevioletred;
+}
+
+.blogs .slide .content .icon a:hover{
+    color: palevioletred;
+}
+
+.blogs .slide .content .title{
+    font-size: 2.5rem;
+    color: black;
+}
+
+.blogs .slide .content .title:hover{
+    text-decoration: underline;
+}
+
+.blogs .slide .content p{
+    padding: 1rem 0;
+    line-height: 2;
+    font-size: 1.6rem;
+    color: black;
+}
+
+.footer{
+    text-align: center;
+}
+
+.footer .icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.footer .icons-container .icons{
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer .icons-container .icons i{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background: palevioletred;
+    color: white;
+    margin-bottom: .5rem;
+    line-height: 5.8rem;
+    font-size: 2rem;
+}
+
+.footer .icons-container .icons h3{
+    font-size: 2rem;
+    color: black;
+    padding: 1rem 0;
+}
+
+.footer .icons-container .icons p{
+    line-height: 1.5;
+    font-size: 1.7rem;
+    color: black;
+    text-transform: none;
+}
+
+.footer .share{
+    margin: 2rem 0;
+}
+
+.footer .share a{
+    height: 6rem;
+    width: 6rem;
+    line-height: 5.8rem;
+    color: palevioletred;
+    background: rgb(245, 205, 219);
+    border-radius: 15px;
+    margin: 0 .3rem;
+    font-size: 2.5rem;
+}
+
+.footer .share a:hover{
+    background: black;
+}
+
+.footer .credit{
+    padding-top: 2rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    border-top: 1px solid rgb(243, 180, 201);
+    color: black;
+}
+
+.footer .credit span{
+    color: palevioletred;
+}
+
+
+
+/* Media Queries 1 */
+
+@media (max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+    .icecream .slide img{
+        height: 15rem;
+        width: 20rem;
+    }
+}
+
+@media (max-width:991px){
+    section{
+        padding: 3rem 2rem;
+    }
+    html{
+        font-size: 55%;
+    }
+    .home .swiper-slide .content h3{
+        font-size: 15vw;
+    }
+}
+
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .fa-times{
+        transform: rotate(180deg);
+    }
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        top: initial;
+        bottom: 1rem;
+    }
+    .menu .slide .box-container .box{
+        flex-flow: column;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .home .swiper-slide .content h3{
+        font-size: 6rem;
+    }
+    .about .image .img1{
+        height: 200px;
+        width: 300px;
+    }
+}
+
+
